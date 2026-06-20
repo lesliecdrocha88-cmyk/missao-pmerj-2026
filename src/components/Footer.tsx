@@ -1,31 +1,74 @@
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 text-white py-12 pb-24">
+    <footer className="bg-slate-950 text-white py-12 pb-24">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+
+        <div className="grid md:grid-cols-3 gap-10 mb-10">
+
+          {/* Marca */}
           <div>
-            <h4 className="font-bold text-lg mb-4">PMERJ 2026</h4>
-            <p className="text-gray-300 text-sm">
-              Método estratégico completo para sua aprovação no concurso de Soldado da PMERJ.
+            <h4 className="text-2xl font-bold text-amber-400 mb-4">
+              MISSÃO PMERJ 2026
+            </h4>
+
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Método Estratégico de Aprovação desenvolvido para candidatos que
+              desejam conquistar uma vaga no concurso de Soldado da PMERJ com
+              planejamento, foco e estudo inteligente.
             </p>
           </div>
+
+          {/* Contato */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Contato</h4>
+            <h4 className="text-xl font-bold mb-4">
+              Contato
+            </h4>
+
+            <p className="text-gray-300 text-sm mb-2">
+              📧 lesliecd.rocha88@gmail.com
+            </p>
+
             <p className="text-gray-300 text-sm">
-              Email: lesliecd.rocha88@gmail.com
+              🌐 www.metodopmerj.com.br
             </p>
           </div>
+
+          {/* Aviso Legal */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Legal</h4>
-            <p className="text-gray-300 text-sm">
-              Material independente. Sem vínculo oficial com a PMERJ.
+            <h4 className="text-xl font-bold mb-4">
+              Aviso Legal
+            </h4>
+
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Este material possui finalidade educacional e preparatória.
+              Não possui vínculo, parceria ou afiliação com a Polícia Militar
+              do Estado do Rio de Janeiro (PMERJ) ou qualquer órgão público.
             </p>
           </div>
+
         </div>
 
-        <div className="border-t border-blue-800 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; 2026 Método Estratégico PMERJ. Todos os direitos reservados.</p>
+        <div className="border-t border-slate-800 pt-8">
+
+          <div className="text-center text-gray-400 text-sm space-y-2">
+
+            <p>
+              © 2026 MISSÃO PMERJ - Método Estratégico de Aprovação.
+            </p>
+
+            <p>
+              Todos os direitos reservados.
+            </p>
+
+            <p className="text-xs text-gray-500">
+              O desempenho individual depende da dedicação, disciplina e rotina
+              de estudos de cada candidato.
+            </p>
+
+          </div>
+
         </div>
+
       </div>
     </footer>
   );
