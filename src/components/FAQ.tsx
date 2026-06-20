@@ -4,35 +4,43 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
 {
 q: "Como recebo o material após a compra?",
-a: "O acesso é totalmente digital. Após a confirmação do pagamento, você recebe o material imediatamente por e-mail e também pela área do aluno da Hotmart.",
+a: "Após a confirmação do pagamento, o acesso é liberado automaticamente. Você recebe o material por e-mail e também poderá acessá-lo diretamente pela plataforma Hotmart.",
 },
 {
-q: "O material serve para quem está começando agora?",
-a: "Sim. O conteúdo foi desenvolvido tanto para iniciantes quanto para candidatos que já estudaram anteriormente e desejam organizar melhor sua preparação.",
+q: "O material serve para quem está começando do zero?",
+a: "Sim. O conteúdo foi desenvolvido para iniciantes e também para candidatos que desejam organizar melhor seus estudos e revisar os principais assuntos da prova.",
 },
 {
-q: "Posso acessar pelo celular?",
-a: "Sim. Você pode acessar pelo celular, tablet, notebook ou computador. O material foi pensado para facilitar seus estudos em qualquer lugar.",
+q: "Posso estudar pelo celular?",
+a: "Sim. O material pode ser acessado pelo celular, tablet, notebook ou computador, permitindo que você estude onde e quando quiser.",
 },
 {
-q: "O conteúdo foi criado para o concurso PMERJ?",
-a: "Sim. O método foi estruturado considerando o perfil do concurso de Soldado da PMERJ e os conteúdos mais importantes para a preparação.",
+q: "O conteúdo é focado no concurso da PMERJ?",
+a: "Sim. Todo o material foi estruturado considerando o perfil do concurso de Soldado da PMERJ e os conteúdos mais importantes para sua preparação.",
 },
 {
-q: "Recebo os flashcards junto com o material?",
-a: "Sim. Os flashcards fazem parte do conteúdo e foram desenvolvidos para acelerar a memorização dos assuntos mais cobrados.",
+q: "Os flashcards já estão inclusos?",
+a: "Sim. Os flashcards estratégicos fazem parte do material e ajudam na revisão rápida e na memorização dos assuntos mais cobrados.",
 },
 {
 q: "O pagamento é seguro?",
-a: "Sim. Todo o processamento é realizado pela Hotmart, uma das maiores plataformas de produtos digitais da América Latina.",
+a: "Sim. O pagamento é processado pela Hotmart, uma das maiores plataformas de produtos digitais da América Latina, com ambiente protegido e diversas formas de pagamento.",
 },
 {
-q: "Existe prazo para acessar o material?",
-a: "Após a compra você terá acesso imediato ao conteúdo conforme as condições disponibilizadas na plataforma de entrega.",
+q: "Quanto tempo terei acesso ao material?",
+a: "O acesso será disponibilizado conforme as condições informadas na plataforma de entrega no momento da compra.",
 },
 {
 q: "Por que o valor está tão baixo?",
-a: "Esta é uma oferta promocional de lançamento criada para ajudar mais candidatos a iniciarem sua preparação sem precisar investir valores elevados.",
+a: "Esta é uma oferta promocional de lançamento. O objetivo é permitir que mais candidatos tenham acesso a um método de estudo organizado e acessível.",
+},
+{
+q: "Preciso comprar algum material complementar?",
+a: "Não. O método foi organizado para que você tenha uma base completa de preparação utilizando o próprio conteúdo disponibilizado.",
+},
+{
+q: "Quando posso começar a estudar?",
+a: "Imediatamente após a confirmação do pagamento. Você poderá acessar o conteúdo no mesmo dia.",
 },
 ];
 
@@ -41,7 +49,8 @@ const [openIdx, setOpenIdx] = useState<number | null>(0);
 
 return (
 <section className="py-20 bg-slate-50">
-<div className="max-w-4xl mx-auto px-4">
+
+  <div className="max-w-4xl mx-auto px-4">
 
     <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-900">
       Perguntas Frequentes
@@ -56,7 +65,7 @@ return (
       {faqs.map((faq, idx) => (
         <div
           key={idx}
-          className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm"
+          className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all"
         >
           <button
             onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
@@ -85,6 +94,7 @@ return (
     </div>
 
   </div>
+
 </section>
 
 );
