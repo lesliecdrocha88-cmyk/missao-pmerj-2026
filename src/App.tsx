@@ -21,6 +21,7 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Página de obrigado
   if (window.location.pathname === "/obrigado") {
     return <Obrigado />;
   }
