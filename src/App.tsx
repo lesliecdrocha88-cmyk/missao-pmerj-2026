@@ -8,25 +8,37 @@ import Footer from "./components/Footer";
 import StickyCTA from "./components/StickyCTA";
 
 export default function App() {
-  const [isScrolled, setIsScrolled] = useState(false);
+const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+useEffect(() => {
+const handleScroll = () => {
+setIsScrolled(window.scrollY > 100);
+};
 
-  return (
-    <div className="min-h-screen bg-white">
-      <Hero />
-      <Benefits />
-      <Modules />
-      <Offer />
-      <FAQ />
-      <Footer />
-      <StickyCTA isVisible={isScrolled} />
-    </div>
-  );
+window.addEventListener("scroll", handleScroll);
+
+return () => window.removeEventListener("scroll", handleScroll);
+
+}, []);
+
+return (
+<div className="min-h-screen bg-white">
+
+  <Hero />
+
+  <Benefits />
+
+  <Modules />
+
+  <FAQ />
+
+  <Offer />
+
+  <Footer />
+
+  <StickyCTA isVisible={isScrolled} />
+
+</div>
+
+);
 }
