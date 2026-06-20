@@ -17,18 +17,37 @@ export default function Hero() {
         {/* Badge */}
         <div className="mb-8 inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500 text-amber-300 px-4 py-2 rounded-full">
           <Shield size={18} />
-          <span className="text-sm font-semibold">Concurso PMERJ 2026</span>
+          <span className="text-sm font-semibold">
+            Concurso PMERJ 2026
+          </span>
         </div>
 
         {/* Main headline */}
         <h1 className="text-5xl md:text-7xl font-oswald font-bold text-center mb-6 leading-tight">
-          Saia na Frente <br />
-          <span className="text-amber-400">da Concorrência</span>
+          Concurso PMERJ 2026
+          <br />
+          <span className="text-amber-400">
+            Método Estratégico de Aprovação
+          </span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-gray-200 text-center max-w-2xl mb-8">
-          O método estratégico completo para você passar na PMERJ 2026. 12 módulos, simulados e flashcards. De R$ 97 por apenas <span className="text-amber-400 font-bold">R$ 9,90</span>
+        <p className="text-xl md:text-2xl text-gray-200 text-center max-w-4xl mb-8">
+          O guia completo para conquistar sua vaga de
+          <span className="text-amber-400 font-bold">
+            {" "}Soldado da PMERJ
+          </span>.
+          <br />
+          Estude de forma inteligente com plano de estudos, simulado comentado,
+          flashcards estratégicos e revisão focada no que realmente cai na prova.
+          <br />
+          <br />
+          <span className="text-white font-bold">
+            De R$ 97,00 por apenas
+          </span>
+          <span className="text-amber-400 font-bold text-3xl">
+            {" "}R$ 9,90
+          </span>
         </p>
 
         {/* CTA Buttons */}
@@ -39,7 +58,11 @@ export default function Hero() {
           >
             Comprar Agora <ArrowRight size={20} />
           </button>
-          <button className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-200">
+
+          <button
+            onClick={scrollToOffer}
+            className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-200"
+          >
             Saiba Mais
           </button>
         </div>
@@ -48,23 +71,38 @@ export default function Hero() {
         <div className="grid grid-cols-3 gap-8 text-center">
           <div>
             <div className="text-3xl font-bold text-amber-400">12</div>
-            <div className="text-sm text-gray-300">Módulos Completos</div>
+            <div className="text-sm text-gray-300">
+              Módulos Completos
+            </div>
           </div>
+
           <div>
             <div className="text-3xl font-bold text-amber-400">60+</div>
-            <div className="text-sm text-gray-300">Flashcards</div>
+            <div className="text-sm text-gray-300">
+              Flashcards Estratégicos
+            </div>
           </div>
+
           <div>
             <div className="text-3xl font-bold text-amber-400">25</div>
-            <div className="text-sm text-gray-300">Questões Simulado</div>
+            <div className="text-sm text-gray-300">
+              Questões Comentadas
+            </div>
           </div>
         </div>
       </div>
 
       {/* Wave divider */}
       <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 text-white">
-          <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="currentColor"></path>
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="w-full h-20 text-white"
+        >
+          <path
+            d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z"
+            fill="currentColor"
+          ></path>
         </svg>
       </div>
     </section>
