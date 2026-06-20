@@ -2,68 +2,90 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
-  {
-    q: "Como recebo o e-book após a compra?",
-    a: "O acesso é 100% digital e imediato. Assim que o pagamento é confirmado, você recebe o e-book no seu e-mail e na área de membros da Hotmart.",
-  },
-  {
-    q: "Preciso de algum conhecimento prévio?",
-    a: "Não. O material foi feito para quem tem ensino médio e quer estudar de forma estratégica, do zero até a reta final.",
-  },
-  {
-    q: "Em quais aparelhos consigo ler?",
-    a: "Em qualquer um: celular, tablet, notebook ou computador. O arquivo é em PDF e abre em todos os dispositivos.",
-  },
-  {
-    q: "O conteúdo está atualizado para o concurso 2026?",
-    a: "Sim. O método foi estruturado com base no modelo recente do concurso de Soldado da PMERJ.",
-  },
-  {
-    q: "Por que o preço é tão baixo?",
-    a: "O objetivo é colocar um método de estudo de qualidade na mão do maior número possível de candidatos.",
-  },
+{
+q: "Como recebo o material após a compra?",
+a: "O acesso é totalmente digital. Após a confirmação do pagamento, você recebe o material imediatamente por e-mail e também pela área do aluno da Hotmart.",
+},
+{
+q: "O material serve para quem está começando agora?",
+a: "Sim. O conteúdo foi desenvolvido tanto para iniciantes quanto para candidatos que já estudaram anteriormente e desejam organizar melhor sua preparação.",
+},
+{
+q: "Posso acessar pelo celular?",
+a: "Sim. Você pode acessar pelo celular, tablet, notebook ou computador. O material foi pensado para facilitar seus estudos em qualquer lugar.",
+},
+{
+q: "O conteúdo foi criado para o concurso PMERJ?",
+a: "Sim. O método foi estruturado considerando o perfil do concurso de Soldado da PMERJ e os conteúdos mais importantes para a preparação.",
+},
+{
+q: "Recebo os flashcards junto com o material?",
+a: "Sim. Os flashcards fazem parte do conteúdo e foram desenvolvidos para acelerar a memorização dos assuntos mais cobrados.",
+},
+{
+q: "O pagamento é seguro?",
+a: "Sim. Todo o processamento é realizado pela Hotmart, uma das maiores plataformas de produtos digitais da América Latina.",
+},
+{
+q: "Existe prazo para acessar o material?",
+a: "Após a compra você terá acesso imediato ao conteúdo conforme as condições disponibilizadas na plataforma de entrega.",
+},
+{
+q: "Por que o valor está tão baixo?",
+a: "Esta é uma oferta promocional de lançamento criada para ajudar mais candidatos a iniciarem sua preparação sem precisar investir valores elevados.",
+},
 ];
 
 export default function FAQ() {
-  const [openIdx, setOpenIdx] = useState<number | null>(0);
+const [openIdx, setOpenIdx] = useState<number | null>(0);
 
-  return (
-    <section className="py-20 bg-slate-50">
-      <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-oswald font-bold text-center mb-4 text-blue-900">
-          Perguntas Frequentes
-        </h2>
-        <p className="text-center text-gray-600 mb-12">
-          Tudo que você precisa saber sobre o e-book
-        </p>
+return (
+<section className="py-20 bg-slate-50">
+<div className="max-w-4xl mx-auto px-4">
 
-        <div className="space-y-4">
-          {faqs.map((faq, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-lg border border-slate-200 overflow-hidden"
-            >
-              <button
-                onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                className="w-full flex items-center justify-between p-4 hover:bg-slate-50 transition-colors"
-              >
-                <h3 className="text-left font-bold text-blue-900">{faq.q}</h3>
-                <ChevronDown
-                  size={20}
-                  className={`text-amber-500 transition-transform ${
-                    openIdx === idx ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {openIdx === idx && (
-                <div className="px-4 pb-4 text-gray-600 border-t border-slate-200">
-                  {faq.a}
-                </div>
-              )}
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-900">
+      Perguntas Frequentes
+    </h2>
+
+    <p className="text-center text-gray-600 mb-12">
+      Tire suas dúvidas antes de garantir seu acesso.
+    </p>
+
+    <div className="space-y-4">
+
+      {faqs.map((faq, idx) => (
+        <div
+          key={idx}
+          className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm"
+        >
+          <button
+            onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+            className="w-full flex items-center justify-between p-5 hover:bg-slate-50 transition-colors"
+          >
+            <h3 className="text-left font-bold text-blue-900">
+              {faq.q}
+            </h3>
+
+            <ChevronDown
+              size={22}
+              className={`text-amber-500 transition-transform ${
+                openIdx === idx ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          {openIdx === idx && (
+            <div className="px-5 pb-5 border-t border-slate-200 text-gray-700 leading-relaxed">
+              {faq.a}
             </div>
-          ))}
+          )}
         </div>
-      </div>
-    </section>
-  );
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
+);
 }
