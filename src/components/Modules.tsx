@@ -1,48 +1,142 @@
 const modules = [
-  { n: "01", title: "Entendendo o Concurso PMERJ", desc: "Edital, etapas, salário e perfil do cargo." },
-  { n: "02", title: "Estratégia dos 30 Pontos", desc: "Como ser eficiente e bater o corte com segurança." },
-  { n: "03", title: "Plano de Estudos de 30 Dias", desc: "Cronograma semana a semana para quem tem pouco tempo." },
-  { n: "04", title: "Português Inteligente", desc: "Interpretação, gramática e os pontos que mais caem." },
-  { n: "05", title: "Matemática Sem Sofrimento", desc: "Macetes e tipos clássicos de questão." },
-  { n: "06", title: "Direitos Humanos Essenciais", desc: "Art. 5º, ECA, Maria da Penha e leis decisivas." },
-  { n: "07", title: "Direito Administrativo e Legislação PMERJ", desc: "Princípios, poderes e normas da corporação." },
-  { n: "08", title: "Direito Penal e Processual Penal", desc: "Crime, penas, prisões e procedimentos." },
-  { n: "09", title: "Flashcards Estratégicos", desc: "60 flashcards de revisão rápida." },
-  { n: "10", title: "Simulado Final", desc: "25 questões inéditas com gabarito comentado." },
-  { n: "11", title: "Plano de Ataque Final", desc: "Checklist e cronograma de revisão." },
-  { n: "12", title: "Mensagem Motivacional", desc: "O empurrão certo para não desistir." },
+{
+n: "01",
+title: "Entendendo o Concurso PMERJ",
+desc: "Conheça todas as etapas, requisitos, salários e como funciona o processo seletivo.",
+},
+{
+n: "02",
+title: "Estratégia dos 30 Pontos",
+desc: "Aprenda a estudar de forma inteligente para atingir a nota mínima com segurança.",
+},
+{
+n: "03",
+title: "Plano de Estudos de 30 Dias",
+desc: "Cronograma completo para organizar sua preparação mesmo com pouco tempo disponível.",
+},
+{
+n: "04",
+title: "Português Inteligente",
+desc: "Interpretação de texto, gramática e assuntos mais cobrados em provas anteriores.",
+},
+{
+n: "05",
+title: "Matemática Sem Sofrimento",
+desc: "Métodos simplificados para resolver as questões mais frequentes da banca.",
+},
+{
+n: "06",
+title: "Direitos Humanos Essenciais",
+desc: "Resumo prático dos principais temas exigidos no concurso.",
+},
+{
+n: "07",
+title: "Direito Administrativo e Legislação PMERJ",
+desc: "Conteúdo explicado de forma simples e objetiva.",
+},
+{
+n: "08",
+title: "Direito Penal e Processual Penal",
+desc: "Os conceitos fundamentais para garantir pontos importantes na prova.",
+},
+{
+n: "09",
+title: "Flashcards Estratégicos",
+desc: "Mais de 60 flashcards para revisar rapidamente os assuntos mais importantes.",
+},
+{
+n: "10",
+title: "Simulado Comentado",
+desc: "Questões cuidadosamente elaboradas para testar sua preparação.",
+},
+{
+n: "11",
+title: "Plano de Ataque Final",
+desc: "O que fazer nos últimos dias antes da prova para chegar preparado.",
+},
+{
+n: "12",
+title: "Mentalidade de Aprovação",
+desc: "Técnicas para manter foco, disciplina e constância durante toda a preparação.",
+},
 ];
 
 export default function Modules() {
-  return (
-    <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-oswald font-bold text-center mb-4 text-blue-900">
-          Os 12 Módulos Completos
-        </h2>
-        <p className="text-center text-gray-600 mb-16">
-          Tudo que você precisa do edital até o dia da prova
-        </p>
+return (
+<section className="py-20 bg-gradient-to-b from-slate-50 to-white">
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {modules.map((mod, idx) => (
-            <div
-              key={idx}
-              className="flex gap-4 p-4 bg-white rounded-lg border border-slate-200 hover:border-amber-500 hover:shadow-md transition-all"
-            >
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-blue-900 text-amber-400 rounded-lg flex items-center justify-center font-bold text-lg">
-                  {mod.n}
-                </div>
-              </div>
-              <div className="flex-1">
-                <h3 className="font-bold text-blue-900 mb-1">{mod.title}</h3>
-                <p className="text-sm text-gray-600">{mod.desc}</p>
+  <div className="max-w-6xl mx-auto px-4">
+
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-900">
+      O Que Você Vai Estudar
+    </h2>
+
+    <p className="text-center text-gray-600 mb-14 max-w-3xl mx-auto">
+      Um conteúdo organizado passo a passo para acelerar sua preparação e
+      aumentar suas chances de aprovação no concurso da PMERJ.
+    </p>
+
+    <div className="grid md:grid-cols-2 gap-6">
+
+      {modules.map((mod, idx) => (
+        <div
+          key={idx}
+          className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-lg hover:border-amber-400 transition-all duration-300"
+        >
+          <div className="flex gap-4">
+
+            <div className="flex-shrink-0">
+              <div className="w-14 h-14 bg-blue-900 text-amber-400 rounded-xl flex items-center justify-center font-bold text-lg">
+                {mod.n}
               </div>
             </div>
-          ))}
+
+            <div>
+              <h3 className="font-bold text-blue-900 text-lg mb-2">
+                {mod.title}
+              </h3>
+
+              <p className="text-gray-600">
+                {mod.desc}
+              </p>
+            </div>
+
+          </div>
         </div>
+      ))}
+
+    </div>
+
+    <div className="mt-16 bg-amber-50 border border-amber-200 rounded-2xl p-8 text-center">
+
+      <h3 className="text-2xl font-bold text-blue-900 mb-4">
+        Bônus Inclusos
+      </h3>
+
+      <div className="grid md:grid-cols-3 gap-6">
+
+        <div>
+          <div className="text-3xl font-bold text-amber-500">60+</div>
+          <p className="text-gray-700">Flashcards Estratégicos</p>
+        </div>
+
+        <div>
+          <div className="text-3xl font-bold text-amber-500">25</div>
+          <p className="text-gray-700">Questões Comentadas</p>
+        </div>
+
+        <div>
+          <div className="text-3xl font-bold text-amber-500">30</div>
+          <p className="text-gray-700">Dias de Planejamento</p>
+        </div>
+
       </div>
-    </section>
-  );
+
+    </div>
+
+  </div>
+
+</section>
+
+);
 }
