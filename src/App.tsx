@@ -32,12 +32,12 @@ export default function App() {
     return <Obrigado />;
   }
 
-  // Pagamento pendente
+  // Aguardando pagamento
   if (window.location.pathname === "/aguardando-pagamento") {
     return <AguardandoPagamento />;
   }
 
-  // Análise de crédito
+  // Em análise de crédito
   if (window.location.pathname === "/analise-credito") {
     return <AnaliseCredito />;
   }
@@ -52,7 +52,7 @@ export default function App() {
     return <TermosUso />;
   }
 
-  // Landing Page
+  // Página principal
   return (
     <div className="min-h-screen bg-white">
       <Hero />
