@@ -69,21 +69,26 @@ export default function Footer() {
               de estudos de cada candidato.
             </p>
 
-            <div className="flex flex-col md:flex-row justify-center gap-4 pt-4">
+            {/* Links Legais */}
+            <div className="pt-4 space-y-2">
 
-              <a
-                href="/politica-de-privacidade"
-                className="text-amber-400 hover:text-amber-300 transition-colors"
-              >
-                Política de Privacidade
-              </a>
+              <div>
+                <a
+                  href="/politica-de-privacidade"
+                  className="text-amber-400 hover:text-amber-300"
+                >
+                  Política de Privacidade
+                </a>
+              </div>
 
-              <a
-                href="/termos-de-uso"
-                className="text-amber-400 hover:text-amber-300 transition-colors"
-              >
-                Termos de Uso
-              </a>
+              <div>
+                <a
+                  href="/termos-de-uso"
+                  className="text-amber-400 hover:text-amber-300"
+                >
+                  Termos de Uso
+                </a>
+              </div>
 
             </div>
 
