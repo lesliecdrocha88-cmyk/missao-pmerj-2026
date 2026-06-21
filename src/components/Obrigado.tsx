@@ -19,20 +19,42 @@ export default function Obrigado() {
           Seu pagamento foi confirmado e o acesso ao material foi enviado para o e-mail cadastrado na Hotmart.
         </p>
 
+        <p className="text-lg text-gray-300 mb-4">
+          Caso não encontre o e-mail, verifique também as pastas:
+          <span className="font-bold text-amber-400">
+            {" "}Spam, Promoções ou Lixeira.
+          </span>
+        </p>
+
         <p className="text-lg text-gray-300 mb-8">
-          Caso não encontre o e-mail, verifique também as pastas
-          <span className="font-bold text-amber-400"> Spam, Promoções ou Lixeira.</span>
+          Agora é hora de iniciar sua preparação e dar o primeiro passo rumo à sua aprovação.
         </p>
 
         <a
           href="https://app.hotmart.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold text-xl px-8 py-4 rounded-xl transition-all duration-200"
         >
           Acessar Hotmart
         </a>
 
-        <p className="text-sm text-gray-400 mt-8">
-          Método Estratégico PMERJ 2026
+        <div className="mt-10 border-t border-white/20 pt-6">
+          <p className="text-gray-300 text-sm mb-2">
+            Precisa de ajuda?
+          </p>
+
+          <p className="text-amber-400 font-semibold">
+            atendimento@metodosconcursos.com.br
+          </p>
+
+          <p className="text-xs text-gray-400 mt-2">
+            Resposta em até 48 horas úteis.
+          </p>
+        </div>
+
+        <p className="text-sm text-gray-500 mt-8">
+          MISSÃO PMERJ 2026 • Método Estratégico de Aprovação
         </p>
 
       </div>
