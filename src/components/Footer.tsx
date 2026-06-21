@@ -18,18 +18,22 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Contato */}
+          {/* Atendimento */}
           <div>
             <h4 className="text-xl font-bold mb-4">
-              Contato
+              Atendimento
             </h4>
 
             <p className="text-gray-300 text-sm mb-2">
-              📧 lesliecd.rocha88@gmail.com
+              📧 atendimento@metodosconcursos.com.br
             </p>
 
             <p className="text-gray-300 text-sm">
               🌐 www.metodopmerj.com.br
+            </p>
+
+            <p className="text-gray-300 text-sm mt-2">
+              Resposta em até 48 horas úteis.
             </p>
           </div>
 
